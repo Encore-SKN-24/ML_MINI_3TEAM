@@ -47,13 +47,15 @@
 | **B형 간염 접종률** | WHO/UNICEF | 면역 시스템 지표 | https://www.who.int/data/gho/<br>data/indicators/indicator-details/GHO/hepatitis-b-(hepb3)<br>-immunization-coverage-among-1-year-olds-(-) |
 
 ## 3. 기술 스택
+| Category | Libraries / Tools |
+| :--- | :--- |
+| **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) |
+| **Data Processing** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+| **Visualization** | ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge) ![Seaborn](https://img.shields.io/badge/Seaborn-5A9BD5?style=for-the-badge) |
+| **Machine Learning** | ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![XGBoost](https://img.shields.io/badge/xgboost-%2324272A.svg?style=for-the-badge&logo=xgboost&logoColor=white) |
+| **HyperParameter Tuning** | ![Optuna](https://img.shields.io/badge/Optuna-%235062A1.svg?style=for-the-badge&logo=target&logoColor=white)
+| **Collaboration Tool** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
-![Seaborn](https://img.shields.io/badge/Seaborn-5A9BD5?style=for-the-badge)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
 ## 4.  데이터 전처리 (Preprocessing)
 ### 4-1. heatmap을 통한 상관관계 분석
@@ -69,6 +71,7 @@
 
 #### 4-2-2. 기술통계량 비교
 - Raw Data
+<img width="2437" height="324" alt="image" src="https://github.com/user-attachments/assets/1ffa46f7-3609-415a-9dd0-16ab1e0f562b" />
 - Cleaned Data
 <img width="2660" height="534" alt="image" src="https://github.com/user-attachments/assets/3bfcd50a-311b-48bf-be93-e0f21eaa3e8d" />
 
@@ -94,6 +97,7 @@ feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’�
 
 ### 5-2. XGBoost
 #### 5-2-1. 데이터
+평균 기대 수명 예측과 관련이 없거나 범주형 데이터인 country, iso_code, region, year. 그리고 너무 직접적인 관련이 있는 hiv_aids은 제거하였다.
 #### 5-2-2. 최적화 전
 <img width="441" height="76" alt="image" src="https://github.com/user-attachments/assets/47b870ad-77a3-41c2-9c80-6754ae4a5f49" />
 
@@ -109,7 +113,7 @@ Schooling(교육연한)이 RandomForestRegression과 XGBoost에서 모두 중요
 
 ## 7. 💬 한 줄 회고
 * **[권민제]**:
-* **[문성준]**:
-* **[전윤우]**:
-* **[정준하]**:
+* **[문성준]**: Optuna 최적화와 K-Fold 검증까지 이어지는 과정을 수행하여 학습의 질을 높일 수 있었다. 그 과정에서 학습곡선 출력을 통해 과적합 여부를 판단하고자 해보았다. 다만, 정작 과적합 여부를 판단하는 명확한 근거나 기준 설정이 없어 무식하게 학습 횟수를 늘려 우선 test set의 rmse를 낮추는 것에만 집중하였다. 추후 프로젝트에서는 과적합 방지를 위해 데이터 수를 늘린다던지, 관련 하이퍼파라미터의 설정은 직접 하는 식으로 더 효율적인 방법을 시도해보겠다.
+* **[전윤우]**: 수업시간에 다룬 머신러닝의 이론과 실습을 넘어 방대한 데이터로 Machine Learning 실습을 하는 것은 쉽지 않았습니다. 전처리 과정에서는 이상치나 결측치가 많았고, 모델 학습 및 평가에 있어서는 기대한 만큼 모델의 성능이 좋지 않다거나 하는 문제가 있었습니다. 그러나 팀원들과 힘을 합쳐 최선의 성능을 내기 위해 노력을 하였다는 점에서 의의가 있었습니다. 2차 프로젝트 때는 양적인 측면과 질적인 측면을 모두 고려한 데이터셋을 찾고 더 나은 모델 학습 및 평가 방법론을 적용해볼 수 있게 노력할 것입니다.
+* **[정준하]**: 여러 회귀 모델을 직접 적용하고 전처리 과정을 반복하며 성능을 비교하는 과정에서, 기대수명은 단일 변수로 설명되는 것이 아니라 경제·보건·교육 등 여러 요인이 함께 작용하는 복합적인 지표임을 데이터로 확인할 수 있었던 의미 있는 경험이었다.
 * **[최하진]**: 
