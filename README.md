@@ -37,14 +37,32 @@
 따라서 본 프로젝트에서는  
 **다양한 보건·사회경제 지표를 활용하여 기대수명을 예측하고,  
 어떤 요인이 중요한지 머신러닝 모델을 통해 분석**하고자 한다.
+---
+👥 팀 소개
 
+| 성함 | GitHub |
+| :---: | :---: |
+| **권민제** | [![GitHub](https://img.shields.io/badge/min3802-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/min3802) |
+| **문성준** | [![GitHub](https://img.shields.io/badge/dal--sj-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/dal-sj) |
+| **전윤우** | [![GitHub](https://img.shields.io/badge/Yunu--Jeon-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Yunu-Jeon) |
+| **정준하** | [![GitHub](https://img.shields.io/badge/junhaj27--jpg-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/junhaj27-jpg) |
+| **최하진** | [![GitHub](https://img.shields.io/badge/hun668486-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/hun6684) |
 ---
 
 ## 2. 데이터셋 개요
 
 ### 2-1. 데이터 출처
-- WHO (World Health Organization)
-- World Bank
+### 📚 데이터 출처 (Data Sources)
+
+| 분석 지표 | 제공 기관 | 내용 | 데이터 소스 (URL) |
+| :--- | :---: | :--- | :--- |
+| **메인 데이터셋** | Kaggle | Raw data | https://www.kaggle.com/datasets/<br>kumarajarshi/life-expectancy-who |
+| **기대 수명** | WHO | 종속 변수 (Target) | https://www.who.int/data/gho/data/<br>indicators/indicator-details/GHO/<br>life-expectancy-at-birth-(years) |
+| **교육 연한** | UNDP | 교육 수준 (Schooling) | https://hdr.undp.org/data-center/<br>documentation-and-downloads |
+| **GDP (1인당)** | World Bank | 국가 경제 지표 | https://data.worldbank.org/indicator/<br>NY.GDP.PCAP.CD?most_recent_<br>year_desc=true |
+| **알코올 소비량** | WHO | 성인 1인당 소비량 | https://www.who.int/data/gho/data/<br>indicators/indicator-details/GHO/<br>alcohol-recorded-per-capita-(15-) |
+| **B형 간염 접종률** | WHO/UNICEF | 면역 시스템 지표 | https://www.who.int/data/gho/<br>data/indicators/indicator-details/GHO/hepatitis-b-(hepb3)<br>-immunization-coverage-among-1-year-olds-(-) |
+---
 
 ### 2-2. 데이터 구성
 - 단위: 국가별 연도별 보건 및 사회경제 지표
@@ -67,7 +85,15 @@
 ---
 
 ## 3. 데이터 전처리 과정
+---
 
+## 3. 🛠 기술 스택
+| 분류 | Stack |
+| :--- | :--- |
+| **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white) |
+| **Visualization** | ![Seaborn](https://img.shields.io/badge/Seaborn-4479A1?style=for-the-badge&logo=Python&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=Matplotlib&logoColor=black) |
+| **Tool** | ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) |
+---
 ### 3-1. 불필요한 변수 제거
 
 모델 학습에 직접적인 영향을 주지 않는 식별 변수 제거
