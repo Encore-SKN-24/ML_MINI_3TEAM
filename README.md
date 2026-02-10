@@ -4,7 +4,7 @@
 ---
 ## 1. 👥 팀 소개
 
-| 성함 | GitHub |
+| 이름 | GitHub |
 | :---: | :---: |
 | **권민제** | [![GitHub](https://img.shields.io/badge/min3802-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/min3802) |
 | **문성준** | [![GitHub](https://img.shields.io/badge/dal--sj-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/dal-sj) |
@@ -16,7 +16,7 @@
 
 ## 2. 📋 프로젝트 개요
 
-### 🧬 Project Story: 무엇이 인간의 수명을 결정짓는가?
+### 2-1. Project Story: 무엇이 인간의 수명을 결정짓는가?
 
 “**술을 많이 마시는 나라는 정말 수명이 짧을까?**”  
 이 단순한 질문에서 출발한 분석은, 예상보다 훨씬 복잡한 데이터의 연결고리를 드러냈습니다.
@@ -39,7 +39,7 @@
 
 ---
 
-### 📚 데이터 출처 (Data Sources)
+### 2-2. 데이터 출처 (Data Sources)
 
 | 분석 지표 | 제공 기관 | 내용 | 데이터 소스 (URL) |
 | :--- | :---: | :--- | :--- |
@@ -51,7 +51,7 @@
 | **B형 간염 접종률** | WHO/UNICEF | 면역 시스템 지표 | https://www.who.int/data/gho/<br>data/indicators/indicator-details/GHO/hepatitis-b-(hepb3)<br>-immunization-coverage-among-1-year-olds-(-) |
 ---
 
-## 3. 🛠 기술 스택
+## 3. 기술 스택
 | 분류 | Stack |
 | :--- | :--- |
 | **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white) |
@@ -59,19 +59,36 @@
 | **Tool** | ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) |
 ---
 
-## 4. ⚙️ 데이터 전처리 (Preprocessing)
-### 🧪 1. 상관관계 분석 (Heatmap)
+## 4.  데이터 전처리 (Preprocessing)
+### 4-1. heatmap을 통한 상관관계 분석
 <img width="1050" height="998" alt="image" src="https://github.com/user-attachments/assets/a77af736-18b4-4c70-a110-d4252e0f4d3c" />
 
 * **핵심 인사이트**: 히트맵 분석 결과, 예상과 달리 **알코올 소비량은 기대수명과 유의미하게 높은 상관관계를 보이지 않았습니다.** 이는 술 소비량 자체가 수명을 결정짓는 단일 요인이 아님을 입증합니다.
 
-1. **데이터 정화**: 여러 항목에 걸쳐 결측치가 너무 많은 국가(4개 컬럼 이상 비어있는 경우)는 분석의 왜곡을 방지하기 위해 가장 먼저 분석 대상에서 제외했습니다.
-2. **시간적 보간**: 한 국가의 데이터 중 세로(연도) 방향으로 비어있는 경우, 해당 컬럼의 **전후년 평균값**으로 대치했습니다.
-3. **공간적 보간**: 전후 데이터가 없는 경우, 해당 국가가 속한 **지역(Region)의 평균값**을 활용하여 지역적 특성을 반영했습니다.
+### 4-2. 결측치 및 이상치 처리
+#### 4-2-1. 전체적인 과정 소개
+- **데이터 정화**: 여러 항목에 걸쳐 결측치가 너무 많은 국가(4개 컬럼 이상 비어있는 경우)는 분석의 왜곡을 방지하기 위해 가장 먼저 분석 대상에서 제외했습니다.
+- **시간적 보간**: 한 국가의 데이터 중 세로(연도) 방향으로 비어있는 경우, 해당 컬럼의 **전후년 평균값**으로 대치했습니다.
+- **공간적 보간**: 전후 데이터가 없는 경우, 해당 국가가 속한 **지역(Region)의 평균값**을 활용하여 지역적 특성을 반영했습니다.
 
+#### 4-2-2. 기술통계량 비교
 
-## 5. 📊 수행 결과
+## 5. 사용한 모델과 학습 성과
+### 5-1. RandomForestRegression
+#### 5-1-1. 데이터
+feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’와 범주형 자료들과 target과 직접적인 관련이 있는 ‘HIV_AIDS’를 제외
 
+#### 5-1-2. max_depth = 5
+<img width="566" height="102" alt="image" src="https://github.com/user-attachments/assets/4f54a68d-49b3-40dc-a950-ab496ff5646a" />
+
+#### 5-1-3. RandomForestRegression에 Optuna를 적용한 결과
+<img width="262" height="136" alt="image" src="https://github.com/user-attachments/assets/9a859459-269b-447b-86f1-e4958e6f065d" />
+<img width="542" height="95" alt="image" src="https://github.com/user-attachments/assets/69008c2c-0d65-478f-b82e-742f6d28b198" />
+
+#### 5-1-4. 시각화
+<img width="792" height="590" alt="image" src="https://github.com/user-attachments/assets/cdc780fc-bb8b-4190-9296-43844bd756a2" />
+
+### 5-2. XGBoost
 
 ## 6. 🎯 최종 결론: 
 ---
