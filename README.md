@@ -2,7 +2,7 @@
 ## 🌍 [그럴 수 ~ 명있지]: 데이터로 오래 사는 진짜 이유를 찾다.
 > WHO 데이터를 기반으로 기대수명을 결정짓는 구조적 요인을 분석한 데이터 프로젝트
 
-## 1. 👥 팀 소개
+## 1. 팀 소개
 
 | 이름 | GitHub |
 | :---: | :---: |
@@ -12,7 +12,7 @@
 | **정준하** | [![GitHub](https://img.shields.io/badge/junhaj27--jpg-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/junhaj27-jpg) |
 | **최하진** | [![GitHub](https://img.shields.io/badge/hun6684-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/hun6684) |
 
-## 2. 📋 프로젝트 개요
+## 2. 프로젝트 개요
 
 ### 2-1. Project Story: 무엇이 인간의 수명을 결정짓는가?
 
@@ -68,23 +68,43 @@
 - **공간적 보간**: 전후 데이터가 없는 경우, 해당 국가가 속한 **지역(Region)의 평균값**을 활용하여 지역적 특성을 반영했습니다.
 
 #### 4-2-2. 기술통계량 비교
+- Raw Data
+- Cleaned Data
+<img width="2660" height="534" alt="image" src="https://github.com/user-attachments/assets/3bfcd50a-311b-48bf-be93-e0f21eaa3e8d" />
 
 ## 5. 사용한 모델과 학습 성과
 ### 5-1. RandomForestRegression
 #### 5-1-1. 데이터
 feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’와 범주형 자료들과 target과 직접적인 관련이 있는 ‘HIV_AIDS’를 제외
 
-#### 5-1-2. max_depth = 5
-<img width="566" height="102" alt="image" src="https://github.com/user-attachments/assets/4f54a68d-49b3-40dc-a950-ab496ff5646a" />
+#### 5-1-2. Optuna 적용 전
+<img width="436" height="67" alt="image" src="https://github.com/user-attachments/assets/c3d4f9d7-4e78-41d1-b93a-ca85db2c87fe" />
+
+#### 5-1-2. Optuna 적용 전 학습 곡선
+<img width="554" height="455" alt="image" src="https://github.com/user-attachments/assets/c82341f5-3bfa-47e4-8706-ab68bbe8045d" />
+- max_depth = 8 이후로 Training Score와 Cross-validation Score의 RMSE의 차이가 커져 과대적합 발생
+  
+<img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/53331494-ff50-465b-873b-43e2b3947293" />
 
 #### 5-1-3. RandomForestRegression에 Optuna를 적용한 결과
-<img width="262" height="136" alt="image" src="https://github.com/user-attachments/assets/9a859459-269b-447b-86f1-e4958e6f065d" />
-<img width="542" height="95" alt="image" src="https://github.com/user-attachments/assets/69008c2c-0d65-478f-b82e-742f6d28b198" />
+<img width="213" height="111" alt="image" src="https://github.com/user-attachments/assets/3eee1ab1-a09e-4fbe-9c25-ef10402441dd" />
+<img width="435" height="86" alt="image" src="https://github.com/user-attachments/assets/f2a6b5ed-c432-4235-abc3-b3f495a21128" />
 
 #### 5-1-4. 시각화
-<img width="792" height="590" alt="image" src="https://github.com/user-attachments/assets/cdc780fc-bb8b-4190-9296-43844bd756a2" />
+<img width="1089" height="789" alt="image" src="https://github.com/user-attachments/assets/c417ef8d-a8b4-4fdf-8875-4f8c068c6cc2" />
 
+---
 ### 5-2. XGBoost
+#### 5-2-1. 데이터
+#### 5-2-2. 최적화 전
+<img width="441" height="76" alt="image" src="https://github.com/user-attachments/assets/47b870ad-77a3-41c2-9c80-6754ae4a5f49" />
+
+#### 5-2-3. trial.suggest_int('max_depth', 8, 11)
+<img width="318" height="161" alt="image" src="https://github.com/user-attachments/assets/741d91d3-4ae6-468d-bdec-fccacd5fc288" />
+<img width="438" height="72" alt="image" src="https://github.com/user-attachments/assets/a37e24ed-9965-481b-a44f-ad0ca497ed5f" />
+
+#### 5-2-4. 기대수명에 영향을 미치는 Features에 대한 시각화 결과
+<img width="1122" height="697" alt="image" src="https://github.com/user-attachments/assets/027ec963-e4ec-4ee5-b4c0-b2cf0a015cbc" />
 
 ## 6. 🎯 최종 결론: 
 
