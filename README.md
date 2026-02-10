@@ -92,7 +92,6 @@ feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’�
 #### 5-1-4. 시각화
 <img width="1089" height="789" alt="image" src="https://github.com/user-attachments/assets/c417ef8d-a8b4-4fdf-8875-4f8c068c6cc2" />
 
----
 ### 5-2. XGBoost
 #### 5-2-1. 데이터
 #### 5-2-2. 최적화 전
