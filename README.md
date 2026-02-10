@@ -104,7 +104,8 @@ feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’�
 #### 5-2-4. 기대수명에 영향을 미치는 Features에 대한 시각화 결과
 <img width="1122" height="697" alt="image" src="https://github.com/user-attachments/assets/027ec963-e4ec-4ee5-b4c0-b2cf0a015cbc" />
 
-## 6. 🎯 최종 결론: 
+## 6. 🎯 최종 결론:
+Schooling이 RandomForestRegression과 XGBoost 모두 의미있는 변수로 도출되었다.
 
 ## 7. 💬 한 줄 회고
 * **[권민제]**:
