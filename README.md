@@ -1,7 +1,7 @@
 # ML_MINI_3TEAM
 ## 🌍 [그럴 수 ~ 명있지]: 데이터로 오래 사는 진짜 이유를 찾다.
 > WHO 데이터를 기반으로 기대수명을 결정짓는 구조적 요인을 분석한 데이터 프로젝트
----
+
 ## 1. 👥 팀 소개
 
 | 이름 | GitHub |
@@ -11,8 +11,6 @@
 | **전윤우** | [![GitHub](https://img.shields.io/badge/Yunu--Jeon-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Yunu-Jeon) |
 | **정준하** | [![GitHub](https://img.shields.io/badge/junhaj27--jpg-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/junhaj27-jpg) |
 | **최하진** | [![GitHub](https://img.shields.io/badge/hun6684-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/hun6684) |
-
----
 
 ## 2. 📋 프로젝트 개요
 
@@ -37,8 +35,6 @@
 
 비선형적 특성을 지닌 데이터를 머신러닝으로 학습시켜,  **수명 예측에 가장 결정적인 변수는 무엇인지** 살펴보는 것을 본 프로젝트의 최종 목표로 삼았습니다.
 
----
-
 ### 2-2. 데이터 출처 (Data Sources)
 
 | 분석 지표 | 제공 기관 | 내용 | 데이터 소스 (URL) |
@@ -49,7 +45,6 @@
 | **GDP (1인당)** | World Bank | 국가 경제 지표 | https://data.worldbank.org/indicator/<br>NY.GDP.PCAP.CD?most_recent_<br>year_desc=true |
 | **알코올 소비량** | WHO | 성인 1인당 소비량 | https://www.who.int/data/gho/data/<br>indicators/indicator-details/GHO/<br>alcohol-recorded-per-capita-(15-) |
 | **B형 간염 접종률** | WHO/UNICEF | 면역 시스템 지표 | https://www.who.int/data/gho/<br>data/indicators/indicator-details/GHO/hepatitis-b-(hepb3)<br>-immunization-coverage-among-1-year-olds-(-) |
----
 
 ## 3. 기술 스택
 | 분류 | Stack |
@@ -57,7 +52,6 @@
 | **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white) |
 | **Visualization** | ![Seaborn](https://img.shields.io/badge/Seaborn-4479A1?style=for-the-badge&logo=Python&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=Matplotlib&logoColor=black) |
 | **Tool** | ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) |
----
 
 ## 4.  데이터 전처리 (Preprocessing)
 ### 4-1. heatmap을 통한 상관관계 분석
@@ -91,7 +85,6 @@ feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’�
 ### 5-2. XGBoost
 
 ## 6. 🎯 최종 결론: 
----
 
 ## 7. 💬 한 줄 회고
 * **[권민제]**:
