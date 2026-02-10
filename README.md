@@ -57,7 +57,7 @@
 
 ## 4.  데이터 전처리 (Preprocessing)
 ### 4-1. heatmap을 통한 상관관계 분석
-<img width="1050" height="998" alt="image" src="https://github.com/user-attachments/assets/a77af736-18b4-4c70-a110-d4252e0f4d3c" />
+<img width="1050" height="972" alt="image" src="https://github.com/user-attachments/assets/6eb5cf23-ee80-499f-b240-83b3aa792436" />
 
 * **핵심 인사이트**: 히트맵 분석 결과, 예상과 달리 **알코올 소비량은 기대수명과 유의미하게 높은 상관관계를 보이지 않았습니다.** 이는 술 소비량 자체가 수명을 결정짓는 단일 요인이 아님을 입증합니다.
 
@@ -105,7 +105,7 @@ feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’�
 <img width="1122" height="697" alt="image" src="https://github.com/user-attachments/assets/027ec963-e4ec-4ee5-b4c0-b2cf0a015cbc" />
 
 ## 6. 🎯 최종 결론:
-Schooling이 RandomForestRegression과 XGBoost 모두 의미있는 변수로 도출되었다.
+Schooling(교육연한)이 RandomForestRegression과 XGBoost에서 모두 중요도가 높은 변수로 도출되었습니다.
 
 ## 7. 💬 한 줄 회고
 * **[권민제]**:
