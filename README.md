@@ -84,7 +84,7 @@ feature 데이터를 구성할 때 target에 해당하는 ‘Life_expectancy’�
 <img width="436" height="67" alt="image" src="https://github.com/user-attachments/assets/c3d4f9d7-4e78-41d1-b93a-ca85db2c87fe" />
 
 #### 5-1-2. Optuna 적용 전 학습 곡선
-- max_depth = 8 이후로 Training Score와 Cross-validation Score의 RMSE의 차이가 커져 과대적합이 발생했습니다.
+- max_depth가 커질수록 Training Score와 Cross-validation Score의 RMSE의 차이가 커져 과대적합이 발생했습니다.
 <img width="554" height="455" alt="image" src="https://github.com/user-attachments/assets/c82341f5-3bfa-47e4-8706-ab68bbe8045d" />
 <img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/53331494-ff50-465b-873b-43e2b3947293" />
 
